@@ -7,4 +7,4 @@ def home(request):
 
 
 def skills(request):
-    return HttpResponse('Skills')
+    return render(request, 'skills.html')
