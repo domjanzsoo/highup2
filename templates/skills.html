@@ -5,4 +5,20 @@
 
 <h1>Skills</h1>
 
+
+<div>
+    <a href="{% url 'create-skill' %}">Create Skill</a>
+    <ul>
+        {% for s in skills %}
+            <li>
+                <a href="{% url 'update-skill' s.id %}"> Edit </a>
+                <a href="{% url 'delete-skill' s.id %}"> Delete </a>
+                <div>
+                    <a href="{% url 'skill' s.id %}">{{ s.name }}</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
 {% endblock content %}
